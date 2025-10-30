@@ -1,5 +1,4 @@
-'use strict';
+"use strict";
 
-import '/src/sass/utils/tailwind.css';
-import '/src/sass/styles.scss';
-import '/src/js/main.js';
+import "/src/sass/tailwind.css";
+import "/src/js/main.js";
