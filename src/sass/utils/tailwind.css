@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  --color-*: initial;
-  /* --color-arc: #5a5e5e; */
+	--color-*: initial;
+	/* --color-arc: #5a5e5e; */
 }
 
 @layer components {
-  /* .text14 {
+	/* .text14 {
     font-size: 14px;
     font-weight: 500;
     letter-spacing: -0.01em;

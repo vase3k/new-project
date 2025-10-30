@@ -6,8 +6,6 @@ import { meta } from "vite-plugin-meta-tags";
 import vitePluginFaviconsInject from "vite-plugin-favicons-inject";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import resizeImagesPlugin from "./src/js/services/resize-img";
-import createFoldersPlugin from "./src/js/services/createFolder";
-import createFiles from "./src/js/services/createFiles";
 import legacy from "@vitejs/plugin-legacy";
 
 const baseName = `/${path.basename(process.cwd())}`;
@@ -23,8 +21,6 @@ export default defineConfig({
   },
 
   plugins: [
-    createFiles(),
-    createFoldersPlugin(),
     tailwindcss(),
     webfontDownload(
       [

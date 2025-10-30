@@ -70,13 +70,10 @@ function createFiles() {
                     import '/src/js/main.js';`,
         },
         {
-          path: "prettier.config.js",
-          content: `
-              /** @type {import('prettier').Config & import('prettier-plugin-tailwindcss').PluginOptions} */
-              export default {
-              plugins: ["prettier-plugin-tailwindcss"],
-              };
-                `,
+          path: ".prettierrc",
+          content: `{"plugins": ["prettier-plugin-tailwindcss"],
+                    "tailwindStylesheet": "src/sass/utils/tailwind.css"
+                    }`,
         },
         {
           path: "note.txt",
