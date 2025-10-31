@@ -4,8 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import Unfonts from "unplugin-fonts/vite";
 import { meta } from "vite-plugin-meta-tags";
 import vitePluginFaviconsInject from "vite-plugin-favicons-inject";
-import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
-import resizeImagesPlugin from "./src/js/services/resize-img";
+import convertWebp from "./src/js/services/convertWebp";
 import legacy from "@vitejs/plugin-legacy";
 
 const baseName = `/${path.basename(process.cwd())}`;
@@ -70,6 +69,7 @@ export default defineConfig({
 		}),
 		vitePluginFaviconsInject("src/favicon/favicon.png", {
 			background: "#fff",
+			path: "assets/fav",
 			icons: {
 				android: true,
 				appleIcon: true,
@@ -82,16 +82,14 @@ export default defineConfig({
 			appShortName: "title",
 			appDescription: "title",
 		}),
-		ViteImageOptimizer({
-			png: { quality: 80 },
-			jpeg: { quality: 75 },
-		}),
-		resizeImagesPlugin({
+		convertWebp({
 			inputDir: "dist",
-			width: 1366,
+			width: 180,
+			quality: 80,
+			excludeFolder: ["images"],
 		}),
-		legacy({
-			targets: ["defaults"],
-		}),
+		// legacy({
+		// 	targets: ["defaults"],
+		// }),
 	],
 });

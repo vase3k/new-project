@@ -1,14 +1,7 @@
 @import "tailwindcss";
 
-@layer base {
-	html {
-		font-family: ttfirsneue-medium;
-	}
-}
-
 @theme {
 	--color-*: initial;
-
 	--color-amber: #ecd097;
 	--color-b10: #0000001a;
 	--color-b50: #00000080;
@@ -47,12 +40,266 @@
 	--color-violet: #b182ff;
 	--color-walnut: #90733a;
 	--color-white: #ffffff;
+
+	--font-benzin-regular: "Benzin-Regular", sans-serif;
+	--font-benzin-medium: "Benzin-Medium", sans-serif;
+	--font-tt-firs-neue: "TT Firs Neue", sans-serif;
+	--font-benzin-semibold: "Benzin-Semibold", sans-serif;
+	--font-benzin-bold: "Benzin-Bold", sans-serif;
 }
 
-@layer components {
-	/* .text14 {
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: -0.01em;
-  } */
+@layer utilities {
+	.font-text11 {
+		@apply font-benzin-regular text-xs font-normal;
+	}
+
+	.font-text111 {
+		@apply font-benzin-regular text-xs font-normal;
+		line-height: 8.455;
+	}
+
+	.font-text112 {
+		@apply font-benzin-regular text-xs leading-3 font-normal;
+	}
+
+	.font-text113 {
+		@apply font-benzin-regular text-xs leading-7 font-normal;
+	}
+
+	.font-text114 {
+		@apply font-benzin-regular text-xs leading-4 font-normal;
+	}
+
+	.font-text12 {
+		@apply font-benzin-regular text-xs leading-4 font-normal;
+	}
+
+	.font-text121 {
+		@apply font-benzin-regular text-sm leading-6 font-normal;
+	}
+
+	.font-text122 {
+		@apply font-benzin-medium text-xs leading-3 font-normal;
+	}
+
+	.font-text123 {
+		@apply font-benzin-regular text-xs leading-3 font-normal;
+	}
+
+	.font-text13 {
+		@apply font-benzin-regular text-xs font-normal;
+	}
+
+	.font-text131 {
+		@apply font-benzin-regular text-xs leading-6 font-normal;
+	}
+
+	.font-text14 {
+		@apply font-benzin-regular text-sm leading-6 font-normal;
+	}
+
+	.font-text141 {
+		@apply font-benzin-regular text-sm leading-6 font-normal;
+	}
+
+	.font-text142 {
+		@apply font-benzin-regular text-sm font-normal;
+		line-height: 6.643;
+	}
+
+	.font-text143 {
+		@apply font-benzin-medium text-sm leading-3 font-normal;
+	}
+
+	.font-text144 {
+		@apply font-benzin-medium text-sm leading-3 font-normal;
+	}
+
+	.font-text145 {
+		@apply font-benzin-medium text-sm leading-4 font-normal;
+	}
+
+	.font-text146 {
+		@apply font-benzin-medium text-sm leading-3 font-normal;
+	}
+
+	.font-text147 {
+		@apply font-benzin-medium text-sm leading-4 font-normal;
+	}
+
+	.font-text148 {
+		@apply font-benzin-regular text-sm leading-4 font-normal;
+	}
+
+	.font-text15 {
+		@apply font-benzin-regular text-sm font-normal;
+		line-height: 6.2;
+	}
+
+	.font-text151 {
+		@apply font-benzin-regular text-sm leading-6 font-normal;
+	}
+
+	.font-text152 {
+		@apply font-benzin-regular text-sm leading-7 font-normal;
+	}
+
+	.font-text153 {
+		@apply font-benzin-regular text-sm leading-7 font-normal;
+	}
+
+	.font-text154 {
+		@apply font-benzin-regular text-sm leading-6 font-normal;
+	}
+
+	.font-text155 {
+		@apply font-benzin-medium text-sm leading-8 font-normal;
+	}
+
+	.font-text16 {
+		@apply font-benzin-regular text-base font-normal;
+		line-height: 5.813;
+	}
+
+	.font-text161 {
+		@apply font-tt-firs-neue text-base font-medium;
+	}
+
+	.font-text162 {
+		@apply font-tt-firs-neue text-base font-medium;
+	}
+
+	.font-text17 {
+		@apply font-benzin-semibold text-base font-normal;
+		line-height: 5.471;
+	}
+
+	.font-text171 {
+		@apply font-benzin-regular text-base leading-6 font-normal;
+	}
+
+	.font-text18 {
+		@apply font-benzin-regular text-lg leading-6 font-normal;
+	}
+
+	.font-text181 {
+		@apply font-benzin-medium text-lg leading-8 font-normal;
+	}
+
+	.font-text182 {
+		@apply font-benzin-regular text-lg leading-5 font-normal;
+	}
+
+	.font-text19 {
+		@apply font-benzin-regular text-lg leading-9 font-normal;
+	}
+
+	.font-text191 {
+		@apply font-benzin-regular text-lg leading-9 font-normal;
+	}
+
+	.font-text20 {
+		@apply font-benzin-regular text-xl font-normal;
+		line-height: 4.65;
+	}
+
+	.font-text201 {
+		@apply font-benzin-medium text-xl font-normal;
+		line-height: 4.65;
+	}
+
+	.font-text202 {
+		@apply font-benzin-regular text-xl leading-7 font-normal;
+	}
+
+	.font-text22 {
+		@apply font-benzin-medium leading-8 font-normal;
+		font-size: 22px;
+	}
+
+	.font-text221 {
+		@apply font-benzin-medium leading-8 font-normal;
+		font-size: 22px;
+	}
+
+	.font-text222 {
+		@apply font-benzin-bold font-normal;
+		font-size: 22px;
+		line-height: 4.227;
+	}
+
+	.font-text25 {
+		@apply font-benzin-medium text-2xl leading-8 font-normal;
+	}
+
+	.font-text27 {
+		@apply font-benzin-bold leading-8 font-normal;
+		font-size: 27px;
+	}
+
+	.font-text30 {
+		@apply font-benzin-bold text-3xl font-normal;
+		line-height: 3.1;
+	}
+
+	.font-text301 {
+		@apply font-benzin-semibold text-3xl font-normal;
+		line-height: 3.1;
+	}
+
+	.font-text302 {
+		@apply font-benzin-semibold text-3xl font-normal;
+		line-height: 3.1;
+	}
+
+	.font-text303 {
+		@apply font-benzin-regular text-3xl leading-7 font-normal;
+	}
+
+	.font-text34 {
+		@apply font-benzin-regular leading-7 font-normal;
+		font-size: 34px;
+	}
+
+	.font-text35 {
+		@apply font-tt-firs-neue text-4xl leading-9 font-bold;
+	}
+
+	.font-text351 {
+		@apply font-tt-firs-neue text-4xl leading-9 font-bold;
+	}
+
+	.font-text40 {
+		@apply font-benzin-bold font-normal;
+		font-size: 40px;
+		line-height: 2.325;
+	}
+
+	.font-text45 {
+		@apply font-benzin-bold font-normal;
+		font-size: 45px;
+		line-height: 2.067;
+	}
+
+	.font-text55 {
+		@apply font-benzin-bold font-normal;
+		font-size: 55px;
+		line-height: 1.691;
+	}
+
+	.font-text60 {
+		@apply font-benzin-bold text-6xl font-normal;
+		line-height: 1.55;
+	}
+
+	.font-text70 {
+		@apply font-benzin-bold leading-snug font-normal;
+		font-size: 70px;
+	}
+
+	.font-text80 {
+		@apply font-benzin-bold font-normal;
+		font-size: 80px;
+		line-height: 1.163;
+	}
 }
