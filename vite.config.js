@@ -10,7 +10,7 @@ import legacy from "@vitejs/plugin-legacy";
 const baseName = `/${path.basename(process.cwd())}`;
 
 export default defineConfig({
-	base: baseName,
+	base: baseName + '/dist/',
 	build: {
 		rollupOptions: {
 			input: {
