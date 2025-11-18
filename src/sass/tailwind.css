@@ -7,6 +7,12 @@
 
     html {
         @apply overflow-x-hidden scroll-smooth;
+        scrollbar-gutter: stable;
+    }
+
+    button,
+    label {
+        @apply cursor-pointer;
     }
 }
 

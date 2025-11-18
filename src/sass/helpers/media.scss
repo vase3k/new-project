@@ -1,0 +1,28 @@
+$xl: 1440px;
+$lg: 1024px;
+$md: 768px;
+$sm: 480px;
+
+@mixin sm {
+    @media (width >= $sm) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (width >= $md) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (width >= $lg) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (width >= $xl) {
+        @content;
+    }
+}
