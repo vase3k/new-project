@@ -1,6 +1,7 @@
+@use "/src/sass/helpers/variables" as *;
 @use "sass:math";
 
-@mixin fluid-text($min, $max) {
+@function fluid($min, $max) {
     $maxViewportWidth: 1440;
     $minViewportWidth: 480;
 
@@ -12,11 +13,15 @@
     $slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
     $yAxisIntersection: -$minWidth * $slope + $minSize;
 
-    font-size: clamp(
+    @return clamp(
         #{$minSize * 1rem},
         #{$yAxisIntersection * 1rem} + #{$slope * 100vw},
         #{$maxSize * 1rem}
     );
+}
+
+@mixin fluid-text($min, $max) {
+    font-size: fluid($min, $max);
 }
 
 @mixin hide {

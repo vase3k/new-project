@@ -2,6 +2,7 @@ import path from "path";
 import { defineConfig } from "vite";
 import tailwindcss from "@tailwindcss/vite";
 import Unfonts from "unplugin-fonts/vite";
+import webfontDownload from "vite-plugin-webfont-dl";
 import { meta } from "vite-plugin-meta-tags";
 import vitePluginFaviconsInject from "vite-plugin-favicons-inject";
 import convertWebp from "./src/js/services/convertWebp";
@@ -21,20 +22,30 @@ export default defineConfig({
 
     plugins: [
         tailwindcss(),
-        Unfonts({
-            custom: {
-                families: [
-                    {
-                        name: "Benzin",
-                        local: "Benzin",
-                        src: "src/font/benzin-bold.woff2",
-                    },
-                ],
-                display: "swap",
-                preload: true,
-                injectTo: "head-prepend",
-            },
-        }),
+        // Unfonts({
+        //     custom: {
+        //         families: [
+        //             {
+        //                 name: "Benzin",
+        //                 local: "Benzin",
+        //                 src: "src/font/benzin-bold.woff2",
+        //             },
+        //         ],
+        //         display: "swap",
+        //         preload: true,
+        //         injectTo: "head-prepend",
+        //     },
+        // }),
+        // webfontDownload(
+        //     [
+        //         "https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap",
+        //     ],
+        //     {
+        //         injectAsStyleTag: false,
+        //         minifyCss: true,
+        //         assetsSubfolder: "fonts",
+        //     },
+        // ),
         meta({
             title: "title",
             description: "описание",
